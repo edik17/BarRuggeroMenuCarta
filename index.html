@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Ruggero</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-section {
+            margin-bottom: 30px;
+        }
+        .menu-section h2 {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .nav-link {
+            display: block;
+            text-align: center;
+            margin: 5px 0;
+        }
+        @media (max-width: 576px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .price {
+                align-self: flex-end;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-link {
+                margin: 2px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center" style="font-size: 45px;">Menu Ruggero</h1>
+        <nav class="nav flex-column align-items-center mb-4">
+            <a class="nav-link" href="caffetteria.html">CAFFETTERIA</a>
+            <a class="nav-link" href="aperitivi.html">APERITIVI</a>
+            <a class="nav-link" href="aperitivi_analcolici.html">APERITIVI ANALCOLICI</a>
+            <a class="nav-link" href="cocktail.html">COCKTAIL</a>
+        </nav>
+    </div>
+</body>
+</html>

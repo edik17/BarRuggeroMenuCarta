@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Ruggero - Aperitivi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-section {
+            margin-bottom: 30px;
+        }
+        .menu-section h2 {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 576px) {
+            .menu-item {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .price {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Menu Ruggero</h1>
+        <nav class="nav justify-content-center mb-4">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="caffetteria.html">CAFFETTERIA</a>
+            <a class="nav-link" href="aperitivi_analcolici.html">APERITIVI ANALCOLICI</a>
+            <a class="nav-link" href="cocktail.html">COCKTAIL</a>
+        </nav>
+
+        <div class="menu-section">
+            <h2>APERITIVI 7€</h2>
+            <div class="menu-item">Campari<span class="price">7€</span></div>
+            <div class="menu-item">Della casa<span class="price">7€</span></div>
+            <div class="menu-item">Crodino<span class="price">7€</span></div>
+            <div class="menu-item">Sanbitter<span class="price">7€</span></div>
+            <div class="menu-item">Cocktail SanPellegrino<span class="price">7€</span></div>
+            <div class="menu-item">Spritz Hugo<span class="price">7€</span></div>
+            <div class="menu-item">Spritz Italicus<span class="price">7€</span></div>
+            <div class="menu-item">Spritz Select<span class="price">7€</span></div>
+            <div class="menu-item">Spritz Aperol<span class="price">7€</span></div>
+            <div class="menu-item">Spritz Campari<span class="price">7€</span></div>
+            <div class="menu-item">Spritz Venturo<span class="price">7€</span></div>
+            <div class="menu-item">Spritz Limoncello<span class="price">7€</span></div>
+            <div class="menu-item">Agerola Soda<span class="price">7€</span></div>
+            <div class="menu-item">Negroni<span class="price">7€</span></div>
+            <div class="menu-item">Negroni Sbagliato<span class="price">7€</span></div>
+            <div class="menu-item">Boulevardier<span class="price">7€</span></div>
+            <div class="menu-item">Americano<span class="price">7€</span></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

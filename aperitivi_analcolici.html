@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            font-size: 5vw;
+            font-size: 4vw; /* Adjusted font size for better readability */
         }
         .menu-section {
             margin-bottom: 30px;
@@ -26,7 +26,13 @@
         .menu-item:last-child {
             border-bottom: none;
         }
+        .price {
+            margin-left: 10px;
+        }
         @media (max-width: 576px) {
+            body {
+                font-size: 6vw; /* Increase font size for better readability on small screens */
+            }
             .menu-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -39,7 +45,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center" style="font-size: 12vw;">Menu Ruggero</h1>
+        <h1 class="text-center" style="font-size: 10vw;">Menu Ruggero</h1>
         
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">

@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Menu Ruggero - Cocktail</title>
+    <title>Menu Ruggero - Caffetteria</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -28,7 +28,7 @@
         }
         @media (max-width: 576px) {
             .menu-item {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: flex-start;
             }
             .price {
@@ -40,9 +40,9 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center" style="font-size: 12vw;">Menu Ruggero</h1>
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
+        
+        <!-- Responsive Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
             <a class="navbar-brand" href="#">Menu Ruggero</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,9 +51,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="caffetteria.html">CAFFETTERIA</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="aperitivi.html">APERITIVI</a>
@@ -67,26 +64,33 @@
                 </ul>
             </div>
         </nav>
-        <!-- End Navbar -->
+        <!-- End Responsive Navbar -->
 
         <div class="menu-section">
-            <h2>COCKTAIL</h2>
-            <div class="menu-item">Cuba Libre<span class="price">7€</span></div>
-            <div class="menu-item">Gin Tonic<span class="price">7€</span></div>
-            <div class="menu-item">Gin Lemon<span class="price">7€</span></div>
-            <div class="menu-item">Vodka Tonic<span class="price">7€</span></div>
-            <div class="menu-item">Vodka Lemon<span class="price">7€</span></div>
-            <div class="menu-item">Mojito<span class="price">7€</span></div>
-            <div class="menu-item">Mojito Campari<span class="price">7€</span></div>
-            <div class="menu-item">Moscow Mule<span class="price">7€</span></div>
-            <div class="menu-item">Sex on the Beach<span class="price">7€</span></div>
-            <div class="menu-item">Margarita<span class="price">7€</span></div>
-            <div class="menu-item">London Mule<span class="price">7€</span></div>
-            <div class="menu-item">Italian Mule<span class="price">7€</span></div>
-            <div class="menu-item">Yovem Mule<span class="price">7€</span></div>
-            <div class="menu-item">Mojito Passion Fruit<span class="price">7€</span></div>
-            <div class="menu-item">Caipiroska<span class="price">7€</span></div>
-            <div class="menu-item">Caipirinha<span class="price">7€</span></div>
+            <h2>CAFFETTERIA | COFFEE BAR</h2>
+            <div class="menu-item">Caffè<span class="price">1,50€</span></div>
+            <div class="menu-item">Decaffeinato<span class="price">1,60€</span></div>
+            <div class="menu-item">Schek<span class="price">3€</span></div>
+            <div class="menu-item">Orzo Piccolo<span class="price">2€</span></div>
+            <div class="menu-item">Ginseng Piccolo<span class="price">2€</span></div>
+            <div class="menu-item">Ginseng Grande<span class="price">2,50€</span></div>
+            <div class="menu-item">Marocchino<span class="price">2€</span></div>
+            <div class="menu-item">Cappuccino<span class="price">2€</span></div>
+            <div class="menu-item">Cappuccino Decaffeinato<span class="price">2,20€</span></div>
+            <div class="menu-item">Cappuccino Light<span class="price">2,50€</span></div>
+            <div class="menu-item">Cappuccino con Panna<span class="price">3€</span></div>
+            <div class="menu-item">Latte macchiato<span class="price">2€</span></div>
+            <div class="menu-item">Latte e caffè<span class="price">2€</span></div>
+            <div class="menu-item">Cioccolata calda<span class="price">3€</span></div>
+            <div class="menu-item">Cioccolata calda con panna<span class="price">3,50€</span></div>
+            <div class="menu-item">Tè e tisane<span class="price">3€</span></div>
+            <div class="menu-item">Espresso Martini<span class="price">7€</span></div>
+            <div class="menu-item">Ponch Mandarino, Rum, Cioccolato<span class="price">3,50€</span></div>
+            <div class="menu-item">China calda<span class="price">3,50€</span></div>
+            <div class="menu-item">Turchetto<span class="price">4€</span></div>
+            <div class="menu-item">Irish coffee<span class="price">7€</span></div>
+            <div class="menu-item">Spremuta Arancia<span class="price">4€</span></div>
+            <div class="menu-item">Succo di frutta<span class="price">3€</span></div>
         </div>
     </div>
 

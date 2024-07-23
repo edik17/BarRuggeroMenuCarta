@@ -27,6 +27,9 @@
         .menu-item:last-child {
             border-bottom: none;
         }
+        .price {
+            font-weight: bold;
+        }
         @media (max-width: 576px) {
             .menu-item {
                 flex-direction: column;
@@ -36,20 +39,32 @@
                 align-self: flex-end;
                 margin-top: 5px;
             }
+            h1 {
+                font-size: 10vw;
+            }
+            .menu-section h2 {
+                font-size: 6vw;
+            }
+            .menu-item {
+                font-size: 5vw;
+            }
         }
         @media (min-width: 577px) {
-            .menu-item {
-                font-size: 2vw;
-            }
             h1 {
                 font-size: 4vw;
+            }
+            .menu-section h2 {
+                font-size: 3vw;
+            }
+            .menu-item {
+                font-size: 2vw;
             }
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center" style="font-size: 10vw;">Menu Ruggero</h1>
+        <h1 class="text-center">Menu Ruggero</h1>
         
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
@@ -80,9 +95,9 @@
         <!-- End Navbar -->
 
         <div class="menu-section">
-            <h2>Aperitivo analcolico</h2>
-            <div class="menu-item">Virgin Colada<span class="price">7€</span></div>
-            <div class="menu-item">Ruggero<span class="price">7€</span></div>
+            <h2>Aperitivi Analcolici</h2>
+            <div class="menu-item">Virgin Colada <span class="price">7€</span></div>
+            <div class="menu-item">Ruggero <span class="price">7€</span></div>
         </div>
     </div>
 

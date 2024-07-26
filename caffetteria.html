@@ -3,54 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Menu Ruggero - Caffetteria</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .menu-section {
-            margin-bottom: 30px;
-        }
-        .menu-section h2 {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 5vw;
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 10px;
-            border-bottom: 1px solid #e9ecef;
-            font-size: 4vw;
-        }
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-        @media (max-width: 576px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .price {
-                align-self: flex-end;
-                margin-top: 5px;
-            }
-        }
-        @media (min-width: 577px) {
-            .menu-item {
-                font-size: 2vw;
-            }
-            h1 {
-                font-size: 4vw;
-            }
-        }
-    </style>
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" href="style.css">
 </head>
+<style>
+    body {
+        background-image: url('https://img.freepik.com/free-photo/delicious-coffee-beans-arrangement_23-2150691309.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff; /* Adjust text color for better contrast */
+    }
+    .navbar, .menu-area {
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        border-radius: 10px;
+    }
+    .single-menu, .navbar-brand, .nav-link {
+        color: #fff;
+    }
+</style>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center" style="font-size: 12vw;">Menu Ruggero</h1>
-        
         <!-- Responsive Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
             <a class="navbar-brand" href="#">Menu Ruggero</a>
@@ -79,33 +52,227 @@
         </nav>
         <!-- End Responsive Navbar -->
 
-        <div class="menu-section">
-            <h2>CAFFETTERIA | COFFEE BAR</h2>
-            <div class="menu-item">Caffè<span class="price">1,50€</span></div>
-            <div class="menu-item">Decaffeinato<span class="price">1,60€</span></div>
-            <div class="menu-item">Schek<span class="price">3€</span></div>
-            <div class="menu-item">Orzo Piccolo<span class="price">2€</span></div>
-            <div class="menu-item">Ginseng Piccolo<span class="price">2€</span></div>
-            <div class="menu-item">Ginseng Grande<span class="price">2,50€</span></div>
-            <div class="menu-item">Marocchino<span class="price">2€</span></div>
-            <div class="menu-item">Cappuccino<span class="price">2€</span></div>
-            <div class="menu-item">Cappuccino Decaffeinato<span class="price">2,20€</span></div>
-            <div class="menu-item">Cappuccino Light<span class="price">2,50€</span></div>
-            <div class="menu-item">Cappuccino con Panna<span class="price">3€</span></div>
-            <div class="menu-item">Latte macchiato<span class="price">2€</span></div>
-            <div class="menu-item">Latte e caffè<span class="price">2€</span></div>
-            <div class="menu-item">Cioccolata calda<span class="price">3€</span></div>
-            <div class="menu-item">Cioccolata calda con panna<span class="price">3,50€</span></div>
-            <div class="menu-item">Tè e tisane<span class="price">3€</span></div>
-            <div class="menu-item">Espresso Martini<span class="price">7€</span></div>
-            <div class="menu-item">Ponch Mandarino, Rum, Cioccolato<span class="price">3,50€</span></div>
-            <div class="menu-item">China calda<span class="price">3,50€</span></div>
-            <div class="menu-item">Turchetto<span class="price">4€</span></div>
-            <div class="menu-item">Irish coffee<span class="price">7€</span></div>
-            <div class="menu-item">Spremuta Arancia<span class="price">4€</span></div>
-            <div class="menu-item">Succo di frutta<span class="price">3€</span></div>
-        </div>
-    </div>
+        <section class="menu-area" id="coffee">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="menu-content pb-60 col-lg-10">
+                        <div class="py-5 title text-center">
+                            <h1 class="mb-10 mt-20 display-5">CAFFETTERIA | COFFEE BAR</h1>
+                        </div>
+                    </div>
+                </div>						
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Caffè normale</h4>
+                                <p class="price float-right">1,50€</p>
+                            </div>
+                            <p>Classic Italian espresso.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Decaffeinato</h4>
+                                <p class="price float-right">1,60€</p>
+                            </div>
+                            <p>Decaffeinated espresso for a milder experience.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Schek</h4>
+                                <p class="price float-right">3€</p>
+                            </div>
+                            <p>Refreshing shaken coffee.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Orzo Piccolo</h4>
+                                <p class="price float-right">2€</p>
+                            </div>
+                            <p>Small barley coffee.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Ginseng Piccolo</h4>
+                                <p class="price float-right">2€</p>
+                            </div>
+                            <p>Small ginseng coffee.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Ginseng Grande</h4>
+                                <p class="price float-right">2,50€</p>
+                            </div>
+                            <p>Large ginseng coffee.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Marocchino</h4>
+                                <p class="price float-right">2€</p>
+                            </div>
+                            <p>Espresso with cocoa and milk foam.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Cappuccino</h4>
+                                <p class="price float-right">2€</p>
+                            </div>
+                            <p>Classic Italian cappuccino.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Cappuccino Decaffeinato</h4>
+                                <p class="price float-right">2,20€</p>
+                            </div>
+                            <p>Decaf cappuccino.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Cappuccino Light</h4>
+                                <p class="price float-right">2,50€</p>
+                            </div>
+                            <p>Light version of cappuccino.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Cappuccino con Panna</h4>
+                                <p class="price float-right">3€</p>
+                            </div>
+                            <p>Cappuccino with whipped cream.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Latte macchiato</h4>
+                                <p class="price float-right">2€</p>
+                            </div>
+                            <p>Milk with a shot of espresso.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Latte e caffè</h4>
+                                <p class="price float-right">2€</p>
+                            </div>
+                            <p>Milk and coffee.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Cioccolata calda</h4>
+                                <p class="price float-right">3€</p>
+                            </div>
+                            <p>Hot chocolate.</p>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Cioccolata calda con panna</h4>
+                                <p class="price float-right">3,50€</p>
+                            </div>
+                            <p>Hot chocolate with whipped cream.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Tè e tisane</h4>
+                                <p class="price float-right">3€</p>
+                            </div>
+                            <p>Tea and herbal infusions.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Espresso Martini</h4>
+                                <p class="price float-right">7€</p>
+                            </div>
+                            <p>Cocktail made with espresso, vodka, and coffee liqueur.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Ponch Mandarino, Rum, Cioccolato</h4>
+                                <p class="price float-right">3,50€</p>
+                            </div>
+                            <p>Punch with mandarin, rum, and chocolate.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>China calda</h4>
+                                <p class="price float-right">3,50€</p>
+                            </div>
+                            <p>Hot herbal liqueur.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Turchetto</h4>
+                                <p class="price float-right">4€</p>
+                            </div>
+                            <p>Turkish-style coffee.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Irish coffee</h4>
+                                <p class="price float-right">7€</p>
+                            </div>
+                            <p>Coffee with Irish whiskey and cream.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Spremuta Arancia</h4>
+                                <p class="price float-right">4€</p>
+                            </div>
+                            <p>Freshly squeezed orange juice.</p>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Succo di frutta</h4>
+                                <p class="price float-right">3€</p>
+                            </div>
+                            <p>Fruit juice.</p>								
+                        </div>
+                    </div>															
+                </div>
+            </div>	
+        </section>
+        
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

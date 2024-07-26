@@ -3,71 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Menu Ruggero - Aperitivi Analcolici</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .menu-section {
-            margin-bottom: 30px;
-        }
-        .menu-section h2 {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 5vw;
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 10px;
-            border-bottom: 1px solid #e9ecef;
-            font-size: 4vw;
-        }
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-        .price {
-            font-weight: bold;
-        }
-        @media (max-width: 576px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .price {
-                align-self: flex-end;
-                margin-top: 5px;
-            }
-            h1 {
-                font-size: 10vw;
-            }
-            .menu-section h2 {
-                font-size: 6vw;
-            }
-            .menu-item {
-                font-size: 5vw;
-            }
-        }
-        @media (min-width: 577px) {
-            h1 {
-                font-size: 4vw;
-            }
-            .menu-section h2 {
-                font-size: 3vw;
-            }
-            .menu-item {
-                font-size: 2vw;
-            }
-        }
-    </style>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" href="style.css">
 </head>
+<style>
+    body {
+        background-image: url("Remove-bg.ai_1721984727972.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff; /* Adjust text color for better contrast */
+    }
+    .navbar, .menu-area {
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        border-radius: 10px;
+    }
+    .single-menu, .navbar-brand, .nav-link {
+        color: #fff;
+    }
+</style>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Menu Ruggero</h1>
         
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
             <a class="navbar-brand" href="#">Menu Ruggero</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -94,11 +53,39 @@
         </nav>
         <!-- End Navbar -->
 
-        <div class="menu-section">
-            <h2>Aperitivi Analcolici</h2>
-            <div class="menu-item">Virgin Colada <span class="price">7€</span></div>
-            <div class="menu-item">Ruggero <span class="price">7€</span></div>
+        <!-- Start menu Area -->
+<section class="menu-area" id="aperitivi-analcolici">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-10">
+                <div class="py-5 title text-center">
+                    <h1 class="mb-10 mt-20 display-5">Aperitivi Analcolici</h1>
+                </div>
+            </div>
+        </div>						
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Virgin Colada</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A tropical blend of coconut cream and pineapple juice.</p>								
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Ruggero</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A refreshing non-alcoholic mix, perfect for any occasion.</p>								
+                </div>
+            </div>															
         </div>
+    </div>	
+</section>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

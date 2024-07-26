@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.menu-area {
+    background:#f8f8f8;
+     background-image: url("https://img.freepik.com/free-photo/delicious-coffee-beans-arrangement_23-2150691309.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .single-menu {
+    background-color: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+    border-radius: 10px;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+  }
+  
+  .single-menu:hover {
+    background-color: #100100;
+    color:#fff;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+    border-radius: 10px;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+  }
+  
+  .single-menu .title-div {
+    padding-bottom: 20px;
+    h4 {
+      font-size:1rem !important;
+    }
+  }
+  
+  .single-menu .price {
+    color: #b68834;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  
+  .single-menu p {
+    margin-bottom: 0;
+  }
+  
+  .text-center {
+      text-align: center;
+  }
+  
+@media (max-width: 576px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price {
+        align-self: flex-end;
+        margin-top: 5px;
+    }
+    h1 {
+        font-size: 10vw;
+    }
+    .menu-section h2 {
+        font-size: 6vw;
+    }
+    .menu-item {
+        font-size: 5vw;
+    }
+}
+@media (min-width: 577px) {
+    h1 {
+        font-size: 4vw;
+    }
+    .menu-section h2 {
+        font-size: 3vw;
+    }
+    .menu-item {
+        font-size: 2vw;
+    }
+}

@@ -3,59 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Menu Ruggero - Aperitivi</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .menu-section {
-            margin-bottom: 30px;
-        }
-        .menu-section h2 {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 5vw;
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 10px;
-            border-bottom: 1px solid #e9ecef;
-            font-size: 4vw;
-        }
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-        .price {
-            margin-left: 10px;
-        }
-        @media (max-width: 576px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .price {
-                align-self: flex-end;
-                margin-top: 5px;
-            }
-        }
-        @media (min-width: 577px) {
-            .menu-item {
-                font-size: 2vw;
-            }
-            h1 {
-                font-size: 4vw;
-            }
-        }
-    </style>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" href="style.css">
 </head>
+<style>
+    body {
+        background-image: url("Remove-bg.ai_1721984727972.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff; /* Adjust text color for better contrast */
+    }
+    .navbar, .menu-area {
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        border-radius: 10px;
+    }
+    .single-menu, .navbar-brand, .nav-link {
+        color: #fff;
+    }
+</style>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center" style="font-size: 12vw;">Menu Ruggero</h1>
-        
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
             <a class="navbar-brand" href="#">Menu Ruggero</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -69,6 +39,9 @@
                         <a class="nav-link" href="caffetteria.html">CAFFETTERIA</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="aperitivi.html">APERITIVI</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="aperitivi_analcolici.html">APERITIVI ANALCOLICI</a>
                     </li>
                     <li class="nav-item">
@@ -78,29 +51,145 @@
             </div>
         </nav>
         <!-- End Navbar -->
-
-        <div class="menu-section">
-            <h2>APERITIVI 7€</h2>
-            <div class="menu-item">Campari<span class="price">7€</span></div>
-            <div class="menu-item">Della casa<span class="price">7€</span></div>
-            <div class="menu-item">Crodino<span class="price">7€</span></div>
-            <div class="menu-item">Sanbitter<span class="price">7€</span></div>
-            <div class="menu-item">Cocktail SanPellegrino<span class="price">7€</span></div>
-            <div class="menu-item">Spritz Hugo<span class="price">7€</span></div>
-            <div class="menu-item">Spritz Italicus<span class="price">7€</span></div>
-            <div class="menu-item">Spritz Select<span class="price">7€</span></div>
-            <div class="menu-item">Spritz Aperol<span class="price">7€</span></div>
-            <div class="menu-item">Spritz Campari<span class="price">7€</span></div>
-            <div class="menu-item">Spritz Venturo<span class="price">7€</span></div>
-            <div class="menu-item">Spritz Limoncello<span class="price">7€</span></div>
-            <div class="menu-item">Agerola Soda<span class="price">7€</span></div>
-            <div class="menu-item">Negroni<span class="price">7€</span></div>
-            <div class="menu-item">Negroni Sbagliato<span class="price">7€</span></div>
-            <div class="menu-item">Boulevardier<span class="price">7€</span></div>
-            <div class="menu-item">Americano<span class="price">7€</span></div>
-        </div>
     </div>
 
+<!-- Start menu Area -->
+<section class="menu-area" id="aperitivi">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-10">
+                <div class="py-5 title text-center">
+                    <h1 class="mb-10 mt-20 display-5">Aperitivi</h1>
+                </div>
+            </div>
+        </div>						
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Campari</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A classic Italian aperitif with a distinctive bitter flavor.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Della Casa</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>House special aperitif, ask for today's mix.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Crodino</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>Non-alcoholic bitter aperitif, perfect for any time.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Sanbitter</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A popular non-alcoholic aperitif with a refreshing bitter taste.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Cocktail SanPellegrino</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>Light and sparkling, a refreshing aperitif option.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Spritz Hugo</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A refreshing spritz with elderflower liqueur, prosecco, and soda water.</p>								
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Spritz Italicus</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A unique spritz featuring Italicus liqueur, prosecco, and soda.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Spritz Select</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A classic Venetian spritz with Select, prosecco, and soda.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Spritz Aperol</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>The iconic Italian spritz with Aperol, prosecco, and soda water.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Spritz Campari</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A bitter twist on the spritz with Campari, prosecco, and soda.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Spritz Venturo</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>An innovative spritz with a special blend of flavors.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Spritz Limoncello</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A refreshing spritz featuring limoncello, prosecco, and soda.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Agerola Soda</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A local twist on the spritz with Agerola soda.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Negroni</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A classic cocktail with gin, vermouth, and Campari.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Negroni Sbagliato</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A twist on the classic Negroni with sparkling wine instead of gin.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Boulevardier</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A sophisticated mix of bourbon, vermouth, and Campari.</p>								
+                </div>
+                <div class="single-menu">
+                    <div class="title-div justify-content-between d-flex">
+                        <h4>Americano</h4>
+                        <p class="price float-right">7€</p>
+                    </div>
+                    <p>A refreshing aperitif with Campari, vermouth, and soda.</p>								
+                </div>
+            </div>															
+        </div>
+    </div>	
+</section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

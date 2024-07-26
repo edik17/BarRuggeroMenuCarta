@@ -53,23 +53,34 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 576px) {
+    .menu-area {
+        background-size: auto;
+        background-attachment: scroll;
+        padding: 10px;
+    }
+
     .menu-item {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .price {
         align-self: flex-end;
         margin-top: 5px;
     }
+
     h1 {
         font-size: 8vw;
     }
+
     .menu-section h2 {
         font-size: 6vw;
     }
+
     .menu-item {
         font-size: 4vw;
     }
+
     .single-menu {
         padding: 15px;
         margin-bottom: 15px;
@@ -78,15 +89,24 @@ body {
 
 /* Tablet Styles */
 @media (min-width: 577px) and (max-width: 768px) {
+    .menu-area {
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 15px;
+    }
+
     h1 {
         font-size: 6vw;
     }
+
     .menu-section h2 {
         font-size: 4vw;
     }
+
     .menu-item {
         font-size: 3vw;
     }
+
     .single-menu {
         padding: 20px;
         margin-bottom: 20px;
@@ -95,15 +115,24 @@ body {
 
 /* Desktop Styles */
 @media (min-width: 769px) {
+    .menu-area {
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 20px;
+    }
+
     h1 {
         font-size: 4vw;
     }
+
     .menu-section h2 {
         font-size: 3vw;
     }
+
     .menu-item {
         font-size: 2vw;
     }
+
     .single-menu {
         padding: 30px;
         margin-bottom: 30px;

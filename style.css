@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-size: 16px; /* Base font size increased for better readability */
 }
 
 .menu-area {
@@ -34,17 +35,18 @@ body {
 }
 
 .single-menu .title-div h4 {
-    font-size: 1rem;
+    font-size: 1.25rem; /* Increased font size */
 }
 
 .single-menu .price {
     color: #b68834;
-    font-size: 1rem;
+    font-size: 1.25rem; /* Increased font size */
     font-weight: 300;
 }
 
 .single-menu p {
     margin-bottom: 0;
+    font-size: 1rem; /* Ensure paragraphs have a readable size */
 }
 
 .text-center {
@@ -70,11 +72,11 @@ body {
     }
 
     h1 {
-        font-size: 8vw;
+        font-size: 6vw; /* Reduced slightly for better balance */
     }
 
     .menu-section h2 {
-        font-size: 6vw;
+        font-size: 5vw; /* Reduced slightly for better balance */
     }
 
     .menu-item {
@@ -96,7 +98,7 @@ body {
     }
 
     h1 {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .menu-section h2 {
@@ -122,11 +124,11 @@ body {
     }
 
     h1 {
-        font-size: 4vw;
+        font-size: 3vw;
     }
 
     .menu-section h2 {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 
     .menu-item {

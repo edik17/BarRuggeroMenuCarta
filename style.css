@@ -35,24 +35,25 @@ body {
 }
 
 .single-menu .title-div h4 {
-    font-size: 1.25rem; /* Increased font size */
+    font-size: 200%; /* Increased font size */
 }
-
+.single-menu .title-div h4 span {
+    font-size: 250%;
+}
 .single-menu .price {
     color: #b68834;
-    font-size: 1.25rem; /* Increased font size */
+    font-size: 5rem; /* Increased font size */
     font-weight: 300;
 }
 
 .single-menu p {
     margin-bottom: 0;
-    font-size: 1rem; /* Ensure paragraphs have a readable size */
+    font-size: 3rem; /* Ensure paragraphs have a readable size */
 }
 
 .text-center {
     text-align: center;
 }
-
 /* Mobile Styles */
 @media (max-width: 576px) {
     .menu-area {

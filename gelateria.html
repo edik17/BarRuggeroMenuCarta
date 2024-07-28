@@ -2,25 +2,75 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Menu Ruggero - Aperitivi Analcolici</title>
+    <title>Menu Ruggero - Gelateria</title>
     
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" href="style.css">
 </head>
-<style>
-    body {
-        background-image: url("IceCream.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: #fff; /* Adjust text color for better contrast */
-    }
-    .navbar, .menu-area {
-        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-        border-radius: 10px;
-    }
-    .single-menu, .navbar-brand, .nav-link {
-        color: #fff;
-    }
+   <style>
+        body {
+            color: #777777;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.625em;
+            position: relative;
+            background-color: #f8f8f8;
+        }
+
+        .menu-area {
+            padding: 20px;
+            background-image: url("IceCream.png");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .single-menu {
+            background-color: #fff;
+            box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .single-menu:hover {
+            background-color: #100100;
+            color: #fff;
+        }
+
+        .title-div h4 {
+            font-size: 200%;
+        }
+
+        .price {
+            color: #b68834;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .single-menu p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 932px) {
+            .menu-area {
+                padding: 10px;
+            }
+
+            .single-menu {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
 </style>
 <body>
     <div class="container mt-5">
@@ -56,78 +106,77 @@
         </nav>
         <!-- End Navbar -->
 
-        <!-- Start menu Area -->
-<section class="menu-area" id="aperitivi-analcolici">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-60 col-lg-10">
-                <div class="py-5 title text-center">
-                    <h1 class="mb-10 mt-20 display-5">Gelateria</h1>
-                </div>
-            </div>
-        </div>						
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="single-menu">
-                    <div class="title-div justify-content-between d-flex">
-                        <h4 style="font-size: 250%;">Coppa in Vetro Piccola</h4>
-                        <p class="price float-right">6€</p>
+        <body>
+            <div class="container mt-5">
+                <!-- Menu Section -->
+                <section class="menu-area" id="gelateria">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="menu-content pb-60 col-lg-10">
+                                <div class="py-5 title text-center">
+                                    <h1 class="mb-10 mt-20 display-5">Gelateria</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="single-menu">
+                                    <div class="title-div d-flex justify-content-between">
+                                        <h4>Coppa in Vetro Piccola</h4>
+                                        <p class="price">€6</p>
+                                    </div>
+                                    <p>Minimum one flavour, maximum two, including cream.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-menu">
+                                    <div class="title-div d-flex justify-content-between">
+                                        <h4>Coppa in vetro Media</h4>
+                                        <p class="price">€7</p>
+                                    </div>
+                                    <p>Three or four flavors including cream.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-menu">
+                                    <div class="title-div d-flex justify-content-between">
+                                        <h4>Coppa in Vetro Grande</h4>
+                                        <p class="price">8€</p>
+                                    </div>
+                                    <p>Four or five flavors including cream.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-menu">
+                                    <div class="title-div d-flex justify-content-between">
+                                        <h4>Frappé</h4>
+                                        <p class="price">4€</p>
+                                    </div>
+                                    <p>Ice Cream with milk Blended.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-menu">
+                                    <div class="title-div d-flex justify-content-between">
+                                        <h4>Affogato</h4>
+                                        <p class="price">8€</p>
+                                    </div>
+                                    <p>Coffee and one of: Amarena, chocolate or coffee Ice Cream.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-menu">
+                                    <div class="title-div d-flex justify-content-between">
+                                        <h4>Affogato Alcolico</h4>
+                                        <p class="price">9€</p>
+                                    </div>
+                                    <p>offee and one of: Amarena, chocolate or coffee Ice Cream. With liquor</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>Minimum one flavour, maximum two, including cream.</p>								
-                </div>
+                </section>
             </div>
-            <div class="col-lg-6">
-                <div class="single-menu">
-                    <div class="title-div justify-content-between d-flex">
-                        <h4 style="font-size: 250%;">Coppa in vetro Media</h4>
-                        <p class="price float-right">7€</p>
-                    </div>
-                    <p>three or four flavors including cream</p>								
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="single-menu">
-                    <div class="title-div justify-content-between d-flex">
-                        <h4 style="font-size: 250%;">Coppa in Vetro Grande</h4>
-                        <p class="price float-right">8€</p>
-                    </div>
-                    <p>four or five flavors including cream</p>								
-                </div>	
-            </div>
-            <div class="col-lg-6">
-                <div class="single-menu">
-                    <div class="title-div justify-content-between d-flex">
-                        <h4 style="font-size: 250%;">Frappé</h4>
-                        <p class="price float-right">4€</p>
-                    </div>
-                    <p>Ice Cream with milk</p>								
-                </div>	
-            </div>
-            <div class="col-lg-6">
-                <div class="single-menu">
-                    <div class="title-div justify-content-between d-flex">
-                        <h4 style="font-size: 250%;">Affogato</h4>
-                        <p class="price float-right">8€</p>
-                    </div>
-                    <p>Coffee and one of: Amarena, chocolate or coffee Ice Cream</p>								
-                </div>	
-            </div>
-            <div class="col-lg-6">
-                <div class="single-menu">
-                    <div class="title-div justify-content-between d-flex">
-                        <h4 style="font-size: 250%;">Affogato Alcolico</h4>
-                        <p class="price float-right">9€</p>
-                    </div>
-                    <p>Coffee and one of: Amarena, chocolate or coffee Ice Cream. With liquor</p>								
-                </div>	
-            </div>																		
-        </div>
-    </div>	
-</section>
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </body>

@@ -1,28 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    font-size: 16px; /* Base font size increased for better readability */
+    color: #777777;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
+    position: relative;
+    background-color: #f8f8f8;
 }
 
 .menu-area {
-    background: #f8f8f8;
+    padding: 20px;
     background-image: url("https://img.freepik.com/free-photo/delicious-coffee-beans-arrangement_23-2150691309.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
 }
 
 .single-menu {
     background-color: #fff;
     box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .single-menu:hover {
@@ -30,22 +31,24 @@ body {
     color: #fff;
 }
 
-.single-menu .title-div {
-    padding-bottom: 20px;
+.title-div h4 {
+    font-size: 200%;
 }
 
-.single-menu .title-div h4 {
-    font-size: 200%; /* Increased font size */
-}
-.single-menu .title-div h4 span {
-    font-size: 250%;
-}
-.single-menu .price {
+.price {
     color: #b68834;
-    font-size: 5rem; /* Increased font size */
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 600;
 }
 
+.single-menu p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
 .single-menu p {
     margin-bottom: 0;
     font-size: 3rem; /* Ensure paragraphs have a readable size */
@@ -54,90 +57,13 @@ body {
 .text-center {
     text-align: center;
 }
-/* Mobile Styles */
 @media (max-width: 576px) {
     .menu-area {
-        background-size: auto;
-        background-attachment: scroll;
         padding: 10px;
-    }
-
-    .menu-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .price {
-        align-self: flex-end;
-        margin-top: 5px;
-    }
-
-    h1 {
-        font-size: 6vw; /* Reduced slightly for better balance */
-    }
-
-    .menu-section h2 {
-        font-size: 5vw; /* Reduced slightly for better balance */
-    }
-
-    .menu-item {
-        font-size: 4vw;
     }
 
     .single-menu {
         padding: 15px;
         margin-bottom: 15px;
-    }
-}
-
-/* Tablet Styles */
-@media (min-width: 577px) and (max-width: 768px) {
-    .menu-area {
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 5vw;
-    }
-
-    .menu-section h2 {
-        font-size: 4vw;
-    }
-
-    .menu-item {
-        font-size: 3vw;
-    }
-
-    .single-menu {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 769px) {
-    .menu-area {
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 3vw;
-    }
-
-    .menu-section h2 {
-        font-size: 2.5vw;
-    }
-
-    .menu-item {
-        font-size: 2vw;
-    }
-
-    .single-menu {
-        padding: 30px;
-        margin-bottom: 30px;
     }
 }

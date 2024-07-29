@@ -112,6 +112,7 @@
                 <div class="py-5 title text-center">
                     <h1 class="mb-10 mt-20 display-5">Aperitivi</h1>
                 </div>
+                <button class="btn btn-primary" onclick="chooseRandomDrink()">DRINK DEL GIORNO</button>
             </div>
         </div>						
         <div class="row">
@@ -245,4 +246,24 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
+<script>
+    function chooseRandomDrink() {
+        const drinks = [
+            "Della Casa", "Crodino", "Sanbitter", "Cocktail SanPellegrino", "Spritz Hugo",
+            "Spritz Italicus", "Spritz Select", "Spritz Campari", "Spritz Venturo",
+            "Spritz Limoncello", "Agerola Soda", "Negroni", "Negroni Sbagliato", "Boulevardier", "Americano"
+        ];
+
+        // Exclude Campari and Aperol Spritz
+        const excludedDrinks = ["Campari", "Spritz Aperol"];
+        const filteredDrinks = drinks.filter(drink => !excludedDrinks.includes(drink));
+
+        // Randomly select a drink
+        const randomDrink = filteredDrinks[Math.floor(Math.random() * filteredDrinks.length)];
+
+        // Display the selected drink
+        alert("Drink del Giorno: " + randomDrink);
+    }
+</script>
 </html>

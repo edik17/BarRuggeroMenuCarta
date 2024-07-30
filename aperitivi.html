@@ -58,6 +58,73 @@
     .text-center {
         text-align: center;
     }
+    
+.button-86 {
+    all: unset;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-86::after,
+  .button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+  }
+  
+  .button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 20px;
+  }
+  
+  .button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  .button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  .button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  .hovered {
+    background-color: #100100;
+    color: #fff;
+}
+  
 
     /* Responsive styling */
     @media (max-width: 932px) {
@@ -112,7 +179,7 @@
                 <div class="py-5 title text-center">
                     <h1 class="mb-10 mt-20 display-5">Aperitivi</h1>
                 </div>
-                <button class="btn btn-primary" onclick="chooseRandomDrink()">DRINK DEL GIORNO</button>
+                <button class="button-86" role="button" onclick="chooseRandomDrink()" style="margin-left: 40%;">DRINK DEL GIORNO</button>
             </div>
         </div>						
         <div class="row">
@@ -249,21 +316,54 @@
 
 <script>
     function chooseRandomDrink() {
-        const drinks = [
-            "Della Casa", "Crodino", "Sanbitter", "Cocktail SanPellegrino", "Spritz Hugo",
-            "Spritz Italicus", "Spritz Select", "Spritz Campari", "Spritz Venturo",
-            "Spritz Limoncello", "Agerola Soda", "Negroni", "Negroni Sbagliato", "Boulevardier", "Americano"
-        ];
+    // Array dei nomi dei drink
+    const drinks = [
+        "Della Casa", "Crodino", "Sanbitter", "Cocktail SanPellegrino", "Spritz Hugo",
+        "Spritz Italicus", "Spritz Select", "Spritz Campari", "Spritz Venturo",
+        "Spritz Limoncello", "Agerola Soda", "Negroni", "Negroni Sbagliato", "Boulevardier", "Americano"
+    ];
 
-        // Exclude Campari and Aperol Spritz
-        const excludedDrinks = ["Campari", "Spritz Aperol"];
-        const filteredDrinks = drinks.filter(drink => !excludedDrinks.includes(drink));
+    // Drink da escludere
+    const excludedDrinks = ["Campari", "Spritz Aperol"];
+    const filteredDrinks = drinks.filter(drink => !excludedDrinks.includes(drink));
 
-        // Randomly select a drink
-        const randomDrink = filteredDrinks[Math.floor(Math.random() * filteredDrinks.length)];
+    // Calcola l'offset giornaliero
+    const currentDate = new Date();
+    const startOf1970 = new Date(1970, 0, 1);
+    const daysSince1970 = Math.floor((currentDate - startOf1970) / (1000 * 60 * 60 * 24));
 
-        // Display the selected drink
-        alert("Drink del Giorno: " + randomDrink);
+    // Controlla se c'è già un drink selezionato per oggi in localStorage
+    const storedDrink = localStorage.getItem('selectedDrink');
+    const storedDay = parseInt(localStorage.getItem('selectedDay'), 10);
+
+    let selectedDrink;
+    if (storedDrink && storedDay === daysSince1970) {
+        // Se il drink è già stato selezionato oggi, usalo
+        selectedDrink = storedDrink;
+    } else {
+        // Altrimenti, seleziona un nuovo drink casualmente
+        const randomIndex = daysSince1970 % filteredDrinks.length;
+        selectedDrink = filteredDrinks[randomIndex];
+
+        // Memorizza la selezione di oggi
+        localStorage.setItem('selectedDrink', selectedDrink);
+        localStorage.setItem('selectedDay', daysSince1970);
     }
+
+    // Trova l'elemento del drink selezionato e applica la classe 'hovered'
+    const allDrinkElements = document.querySelectorAll('.single-menu');
+    allDrinkElements.forEach(drink => drink.classList.remove('hovered'));
+
+    allDrinkElements.forEach(drinkElement => {
+        const title = drinkElement.querySelector('h4').textContent;
+        if (title === selectedDrink) {
+            drinkElement.classList.add('hovered');
+            drinkElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    });
+}
+
+
+
 </script>
 </html>

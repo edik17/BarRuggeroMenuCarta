@@ -8,7 +8,7 @@
 </head>
 <style>
     body {
-        color: #777777;
+        color: #000000;
         font-family: "Poppins", sans-serif;
         font-size: 14px;
         font-weight: 300;
@@ -124,7 +124,17 @@
     background-color: #100100;
     color: #fff;
 }
-  
+.menu-content h1 {
+    display: inline-block; /* Per far sì che il background si adatti al contenuto */
+    background-color: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(29, 21, 7, 0.2);
+    border-radius: 15px; /* Smussare gli angoli */
+    padding: 10px 20px; /* Riduce la dimensione del background */
+    margin-bottom: 30px;
+    font-size: 300%; /* Regola la dimensione del testo, se necessario */
+    transition: background-color 0.3s, color 0.3s;
+}
+
 
     /* Responsive styling */
     @media (max-width: 932px) {
@@ -179,7 +189,7 @@
                 <div class="py-5 title text-center">
                     <h1 class="mb-10 mt-20 display-5">Aperitivi</h1>
                 </div>
-                <button class="button-86" role="button" onclick="chooseRandomDrink()" style="margin-left: 40%;">DRINK DEL GIORNO</button>
+                <button class="button-86" role="button" onclick="chooseRandomDrink()" style="margin-left: 30%;">DRINK DEL GIORNO</button>
             </div>
         </div>						
         <div class="row">
@@ -362,8 +372,5 @@
         }
     });
 }
-
-
-
 </script>
 </html>

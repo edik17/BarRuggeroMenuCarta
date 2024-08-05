@@ -32,18 +32,18 @@ body {
 }
 
 .title-div h4 {
-    font-size: 200%;
+    font-size: 300%;
 }
 
 .price {
     color: #b68834;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
 }
 
 .single-menu p {
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .text-center {

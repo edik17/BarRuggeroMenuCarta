@@ -59,7 +59,74 @@
     .text-center {
         text-align: center;
     }
-    .menu-content h1 {
+/* CSS */
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-57 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-57 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-57:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+.hovered {
+    background-color: #100100;
+    color: #fff;
+}
+.menu-content h1 {
     display: inline-block; /* Per far sì che il background si adatti al contenuto */
     background-color: #fff;
     box-shadow: 0px 10px 30px 0px rgba(29, 21, 7, 0.2);
@@ -126,7 +193,8 @@
                     <h1 class="mb-10 mt-20 display-5">COCKTAIL</h1>
                 </div>
             </div>
-        </div>						
+        </div>					
+        <button class="button-57" role="button" onclick="chooseRandomCocktail()" style="margin-left: 30%;"><span class="text">Non Sai che Cocktail Scegliere?</span><span>Ci penso io😁</span></button>	
         <div class="row">
             <div class="col-lg-4">
                 <div class="single-menu">
@@ -280,4 +348,54 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+<script>
+    function chooseRandomCocktail() {
+        // Array dei nomi dei cocktail
+        const cocktails = [
+            "Cuba Libre", "Gin Tonic", "Gin Lemon", "Vodka Tonic", "Vodka Lemon", "Mojito", 
+            "Mojito Campari", "Moscow Mule", "Sex on the Beach", "Margarita", "London Mule", 
+            "Italian Mule", "Yovem Mule", "Mojito Passion Fruit", "Caipiroska", "Caipirinha"
+        ];
+
+        // Cocktail da escludere
+        const excludedCocktails = [];
+        const filteredCocktails = cocktails.filter(cocktail => !excludedCocktails.includes(cocktail));
+
+        // Calcola l'offset giornaliero
+        const currentDate = new Date();
+        const startOf1970 = new Date(1970, 0, 1);
+        const daysSince1970 = Math.floor((currentDate - startOf1970) / (1000 * 60 * 60 * 24));
+
+        // Controlla se c'è già un cocktail selezionato per oggi in localStorage
+        const storedCocktail = localStorage.getItem('selectedCocktail');
+        const storedDay = parseInt(localStorage.getItem('selectedDayCocktail'), 10);
+
+        let selectedCocktail;
+        if (storedCocktail && storedDay === daysSince1970) {
+            // Se il cocktail è già stato selezionato oggi, usalo
+            selectedCocktail = storedCocktail;
+        } else {
+            // Altrimenti, seleziona un nuovo cocktail casualmente
+            const randomIndex = daysSince1970 % filteredCocktails.length;
+            selectedCocktail = filteredCocktails[randomIndex];
+
+            // Memorizza la selezione di oggi
+            localStorage.setItem('selectedCocktail', selectedCocktail);
+            localStorage.setItem('selectedDayCocktail', daysSince1970);
+        }
+
+        // Trova l'elemento del cocktail selezionato e applica la classe 'hovered'
+        const allCocktailElements = document.querySelectorAll('.single-menu');
+        allCocktailElements.forEach(cocktail => cocktail.classList.remove('hovered'));
+
+        allCocktailElements.forEach(cocktailElement => {
+            const title = cocktailElement.querySelector('h4').textContent;
+            if (title === selectedCocktail) {
+                cocktailElement.classList.add('hovered');
+                cocktailElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    }
+</script>
+
 </html>
